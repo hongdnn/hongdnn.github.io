@@ -8,7 +8,7 @@ const Navbar = () => {
     <a href="https://www.linkedin.com/in/hongdnn/" target="_blank" rel="noopener noreferrer">
         <FaLinkedin />
     </a>
-    <a href="mailto:n_doan9@u.pacific.edu">
+    <a href="mailto:namhongdoan99@gmail.com">
         <FaGoogle />
     </a>
     <a href="https://github.com/hongdnn" target="_blank" rel="noopener noreferrer">

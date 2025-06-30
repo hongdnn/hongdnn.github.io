@@ -1,30 +1,50 @@
 import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.png";
-import project4 from "../assets/projects/project-4.jpg";
 import project5 from "../assets/projects/project-5.png";
+import project6 from "../assets/projects/project-6.png";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web and mobile applications. With 4 years of hands-on experience, I have honed my skills in front-end and back-end technologies. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I am a passionate full stack and AI developer with a knack for crafting robust, scalable web and mobile applications, as well as intelligent solutions. With 4 years of hands-on experience, I have honed my skills in front-end, back-end, and AI technologies. My goal is to leverage my expertise to create innovative products that drive business growth and deliver exceptional user experiences.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly products. I have worked with a variety of technologies, such as Kotlin and Flutter for mobile app, React and Next.js for frontend, and Node.js, Flask and Spring Boot for backend.
-Currently I'm pursuing a Master's degree in Computer Science in the US. Beside building scalable and efficient software products, I hold a strong interest in data science and AI. I actively participate in hackathons and programming competitions such as ICPC, demonstrating a commitment to continuous learning and problem-solving in dynamic environments.`;
+export const ABOUT_TEXT = `I am a dedicated and versatile full stack and AI developer with a passion for creating efficient, user-friendly, and intelligent products. I have worked with a variety of technologies, such as Kotlin and Flutter for mobile apps, React and Next.js for frontend, Node.js, Flask, and Spring Boot for backend, and Python frameworks for AI and data science.
+Currently, I'm pursuing a Master's degree in Computer Science in the US. Besides building scalable and efficient software products, I hold a strong interest in artificial intelligence and I actively participate in hackathons and programming competitions such as ICPC, demonstrating a commitment to continuous learning and problem-solving in dynamic environments.`;
 
 export const EXPERIENCES = [
   {
+    year: "May 2025 - Aug 2025",
+    role: "Software Engineer Intern",
+    company: "LeapFinancial",
+    location: "Miami, FL",
+    description: `Developed a FastMCP server to streamline both backend API access and RAG systems via LlamaIndex for multi-agent LLMs, powering tools like Claude Desktop and AI financial assistants, while reducing deployment size.
+Fine-tuned DeepSeek/Mistral on remittance datasets using HuggingFace Transformers and LoRA, then benchmarked performance via real-world simulations with LangChain and FastAPI, yielding insights for production deployment.
+Generated synthetic datasets using open-source models with MLX_LM for fine-tuning, improving response accuracy and relevance while reducing inference latency by 20% and token-level costs.`,
+    technologies: [
+      "Python",
+      "LangChain",
+      "LangGraph",
+      "LlamaIndex",
+      "FastMCP",
+      "OpenAI",
+      "FastAPI",
+      "HuggingFace",
+      "PostgreSQL",
+    ],
+  },
+  {
     year: "Nov 2022 - Jul 2024",
     role: "Software Engineer",
-    company: "SmartOSC Corporation",
-    description: `Built an admin website to manage cards and send codes via email using Next.js, Node.js, and Amazon SES, while
-implementing reliable payments with 2C2P. Enhanced customer shopping experience by integrating tap-and-pay SDK and PassKit, allowing customers to add
-gift cards to Apple/Google wallets, leading to a 25% increase in wallet adoption. Ensured code quality and streamlined deployments by applying GitHub Actions for analysis and automation,
-reducing deployment time by 30% and minimizing manual errors.`,
+    company: "SmartOSC",
+    location: "Australia",
+    description: `Built admin website with Next.js, email sending via Node.js and Amazon SES, and integrated payments using 2C2P.
+Enhanced customer experience by integrating tap-and-pay SDK and PassKit to enable Apple/Google wallets.
+Ensured code quality and streamlined deployments by applying GitHub Actions and Docker for analysis and automation, reducing deployment time by 30% and minimizing manual errors.`,
     technologies: [
       "Next.js",
       "Express.js",
       "PostgreSQL",
       "AWS SQS/SNS",
       "AWS EC2",
-      "Flutter",
+      "React Native",
       "Kotlin",
       "Objective-C",
     ],
@@ -33,14 +53,13 @@ reducing deployment time by 30% and minimizing manual errors.`,
     year: "Nov 2021 - Oct 2022",
     role: "Software Engineer",
     company: "Deloitte",
-    description: `Handled asynchronous communication between Spring Boot microservices using Kafka, ensuring data consistency
-and fault tolerance. Reduced frontend teams’ workload by developing a reusable Kotlin core package for components across projects.
- Optimized image upload by compressing product images in the Android app and storing them in Amazon S3,
-reducing storage size by approximately 40%.
- Ensured reliable and maintainable code by applying integration and unit tests, achieving 100% function coverage,
-and utilizing Jenkins and SonarQube for code quality analysis.`,
+    location: "Singapore",
+    description: `Handled asynchronous communication between banking microservices built with Spring Boot using Kafka, ensuring data consistency and fault tolerance.
+Reduced latency by 70% with data caching using Redis for backend services and Room for the Android app.
+Optimized image upload by compressing product images in the Android app and storing them in Amazon S3.
+Ensured reliable and maintainable code with Jenkins and SonarQube, achieving 100% unit test function coverage.`,
     technologies: [
-      "Spring Boot",
+      "Java Spring Boot",
       "Kotlin",
       "Kafka",
       "Redis",
@@ -52,17 +71,17 @@ and utilizing Jenkins and SonarQube for code quality analysis.`,
   {
     year: "Aug 2020 - Oct 2021",
     role: "Software Engineer Intern",
-    company: "IGAP Logistics",
-    description: `Maintained a React-based dashboard with search features using Elasticsearch, enhancing user experience by
-enabling rapid and efficient search results. Reduced latency by 70% with data caching using Redis for backend services and Room for the Android app. Implemented real-time customer feedback features using Socket.IO and Node.js.`,
+    company: "Viettel",
+    location: "Vietnam",
+    description: `Maintained a React-based logistics dashboard with search features powered by Elasticsearch and delivery tracking using Google Maps API, enhancing user experience with fast lookup and live location visibility.
+Implemented real-time updates for web and mobile apps using Node.js backend and Firebase Cloud Messaging.`,
     technologies: [
       "React",
-      "Java",
       "Node.js",
       "GCP",
       "Google Map API",
       "MongoDB",
-      "Redis",
+      "Elasticsearch",
       "Firebase Storage/Analytics",
     ],
   },
@@ -70,23 +89,31 @@ enabling rapid and efficient search results. Reduced latency by 70% with data ca
 
 export const PROJECTS = [
   {
+    title: "Mobile Cooking App",
+    image: project6,
+    description: `Built a Flutter app with food image search using a self-trained PyTorch classifier on a 6.5 GB dataset.
+Integrated a LangChain assistant with Gemini and FastAPI to help users discover recipes via natural language.`,
+    link: "https://github.com/hongdnn/appetite_backend",
+    technologies: [],
+  },
+  {
     title: "Social Media Platform",
     image: project1,
-    description: `Developed a Next.js frontend and a microservices architecture with Flask, PostgreSQL, Express.js, and MongoDB, ensuring scalability data management. 
-      Built real-time features with Node.js and Socket.IO, enabling instant notifications and messaging between users. 
-      Managed media storage by integrating the Python service with AWS S3, enabling reliable and secure file handling.`,
+    description: `Developed a Next.js frontend and a microservices architecture using Flask, PostgreSQL, Express.js, and MongoDB, integrating Kafka for scalable event-driven communication and data streaming.
+Built real-time features with Node.js and Socket.IO, enabling instant notifications and messaging between users.
+Managed media storage by integrating the Python service with AWS S3, enabling reliable and secure file handling.`,
     link: "https://yoursocial.site/",
     technologies: [],
   },
   {
     title: "ODSC NVIDIA Hackathon",
     image: project2,
-    description: `Leveraged Google Colab and NVIDIA’s Rapids libraries to process a 9.31 GB dataset efficiently and TensorFlow for
-training a predictive model. Utilizing pandas and RAPIDS cuDF to reduce data processing time by 80%.`,
+    description: `Leveraged Google Colab and NVIDIA’s Rapids libraries to process 9.31 GB of data, cutting time by 80%.
+Developed a disease prediction model with 90% accuracy using scikit-learn and TensorFlow.`,
     link: "https://github.com/hongdnn/Spooktacular-NVIDIA-Data-Science-Competition-Project",
     technologies: [],
   },
-  {
+    {
     title: "Disease Forecasting Project",
     image: project3,
     description: `Developed a Python project to forecast diseases using patient data, illness types, and geographical locations. 
@@ -96,26 +123,17 @@ the test dataset.`,
     technologies: [],
   },
   {
-    title: "Portfolio Website",
-    image: project4,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    link: "",
-    technologies: [],
-  },
-  {
     title: "Recruiting Management Application",
     image: project5,
-    description: `Built a web application to help businesses recruit ideal candidates by matching resumes with job postings. 
-      Implemented PDF editing features and extracted applicant information from resumes using Node.js libraries. 
-      Sent real-time notification using FCM and scheduled recruitment with Calendar API.`,
+    description: `Built a Vue.js web application to match resumes with job postings, helping businesses find ideal candidates.
+Added PDF editing and resume parsing via Node.js, along with interview scheduling using the Google Calendar API.`,
     link: "https://github.com/hongdnn/Recruiting-Application",
     technologies: [],
   },
 ];
 
 export const CONTACT = {
-  address: "1726 N Hunter St, Stockton, CA, 95204",
-  phoneNo: "+1 408 393 8130",
-  email: "n_doan9@u.pacific.edu",
+  address: "916 Terranova Ct, Stockton, CA 95204",
+  phoneNo: "+1 209-684-1862",
+  email: "namhongdoan99@gmail.com",
 };

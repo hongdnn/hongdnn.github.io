@@ -28,6 +28,7 @@ const Projects = () => {
                     alt={project.title}
                     width={300}
                     height={300}
+                    style={{ objectFit: "cover"}}
                   />
                 </div>
               </a>
